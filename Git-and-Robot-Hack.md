@@ -88,4 +88,29 @@ Pushing the changes to Github remote repository: Refer to image 01-04
 
 ## Part 2 - Hacking a robot
 
+The task asked us to interface with a robot using the Linux terminal and some python code. The first step was to connect to the robot itself (named chapman). I used 
+
+*ping chapman.local*
+and then
+*ssh nao@192.168.0.184*
+
+Refer to image 01-05 for terminal screenshots of this
+
+I entered the required password and was now connected to the robot. The next step was to find a way to send it a message.
+
+I created a python file (named hack4.py) in the terminal and copied the code given:
+
+*from naoqi import ALProxy
+tts = ALProxy("ALTextToSpeech", "localhost", 9559)
+tts.say("I've hacked you, robot!")*
+
+Python editing: Refer to image 01-06
+
+Then I ran the executable hack4.py with:
+
+*nano hack4py*
+
+Running the python code: Refer to image 01-07
+
+
 
