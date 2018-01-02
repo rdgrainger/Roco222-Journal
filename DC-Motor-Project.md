@@ -11,8 +11,6 @@ The basic motor is simply one coil of wire wound around a cork with a copper tap
 The whole motor structure is supported by a basic frame with two magnets either side. The coil has 118 turns of copper.
 
 This motor operates by touching positive and ground wires to the commutator- one on each side. This supplies a current to the wire. Since the wire is enameled except for the conducting ends, the current flows from one end to the other. Magnets on either side of the coil create a north-south field for the coil to pass through. We know form the principles of DC motor operation that a current-carrying wire inside a magnetic field will feel a magmnetic force. This force is given by F = iLB. Where i = current, L = wire length nad B = flux density. The result magnetic force on this coil will move it in a certain direction - this can be easily found using the right hand rule.
- 
-
 
 One of the issues we had with this motor was the small size, only allowing for one coil. Having only one coil will not give us the operation we would like to see from the motor. with only one coil moving through the magnetic field, there is current reversal in the wire only once per turn and so the motor cannot easily overcome the weight to turn. The motor needs more torque This is why this cork motor struggles to rotate and requires a push start. It was also difficult to wind the wire around such a small armature.
 
@@ -61,6 +59,16 @@ Our working motor improved on the second design with a much more stable magnet a
 
 'link video of motor spinning'
 
- 
- 
- Calculations:
+## Build an encoder
+
+Our encoder wheel was 3D-printed. The circuit has been made with assistance from the diagram in the dle lab notes
+
+'image link - circuit diagram'
+
+To measure the angular velocity of our motor we created the following arduino code:
+
+'arduino code for angular velocity'
+
+## Controlling the DC Motor
+
+Due to the size of our motor and nature of its design, we needed more current than the arduino's motor shield could handle. To account for this we built a 
