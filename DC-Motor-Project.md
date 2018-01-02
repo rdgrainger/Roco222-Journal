@@ -35,14 +35,32 @@ Some of the major improvements to be made (without considering design changes):
 
 'image link'
 
-We first decided to use 16 coils of wire, each with 100 turns. The commutator would have 32 segments to accomodate this. The wire is coiled around an airbed pump. Our intital idea was to have long but narrow loops from one edge of the shaft to the other. The commutator would comprise of 32 segments in a circle around the end of the shaft. Magnets are to be placed on a support structure wither side of the motor, and would be of a greater number than the original design.
+We first decided to use 16 coils of wire, each with 100 turns. The commutator would have 32 segments to accomodate this. The wire is coiled around an airbed pump. Our intital idea was to have long but narrow loops from one edge of the shaft to the other- this way there is no stacking of coils on the ends of the motor and the loops do not interfere with the commutator. 
+
+'Diagram on coil structure'
+
+ The commutator would comprise of 32 segments in a circle around the end of the shaft. Magnets are to be placed on a support structure wither side of the motor, and would be of a greater number than the original design.
 
 In practice, this motor would not spin. The major problem is the coils of wire- by making them so narrow there would not be a large enough air gap between.
 
 ### Second Iteration
  
-The design was changed to use 8 coils of wire, each with 100 turns. The commutator has 16 segments to accomodate this. The wire is coiled around an airbed pump.
+The design was changed to use 8 coils of wire, each with 100 turns. The commutator has 16 segments to accomodate this. The wire is coiled around an airbed pump. To improve on the previous design, the coils will be widened so that they form a roughly rectangular shape. This allows us to mantain the same principle of not stacking coils, but now the coils can function correctly.
+
+'diagram on improved coil structure'
+
+One of the key elements of this design was the magnet arrangement. The idea was to have an unmoving shaft running through the armature with magnets attached. This shaft would not rotate, rather the armature would rotate around it. Surrounding the armature were two arcs (made of thin plastic) with multiple small magnets attached. This formed a 'shell' that almost surrounded the motor and so a magnetic field would be present for most of each coil's rotation.
+
 'image link'
+
+This arrangement of magnets proved to be an issue. The outer 'shell' crumpled due to the plastic not being rigid enough to withstand the strong magnetic pull from the internal motor shaft magnets. It also left us with little space for the encoder.
+
+### Third Iteration
+
+Our working motor improved on the second design with a much more stable magnet arrangement. The motor now has two commutators- one for positive (attached to end of armature) and one for ground connections (middle of armature). The positive section is wider to allow for easier connection to the power supply.
+
+'link video of motor spinning'
+
  
  
  Calculations:
