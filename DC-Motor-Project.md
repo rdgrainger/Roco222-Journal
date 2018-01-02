@@ -5,7 +5,7 @@ We have been tasked with building a DC motor, testing it and then creating a bet
  
 ### The original motor:
  
-'image link'
+![alt text](DC-Motor-Project resources/corkmotor3.jpg "Cork Motor Picture")
  
 The basic motor is simply one coil of wire wound around a cork with a copper tape commutator. This commutator has two segments protuding from the cork, one for negative and the other, positive. The ends of the coil of wire is stripped and soldered onto the segments so current can be conducted. 
 The whole motor structure is supported by a basic frame with two magnets either side. The coil has 118 turns of copper.
