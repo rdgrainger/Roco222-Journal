@@ -35,4 +35,9 @@ Alternates between two windings and one winding active- effectively combining fu
 'Half-step code'
 Estimation on maximum angular velocity:
 
+### Micro-step
 
+In microstep mode, the current provides sine waveform to the windings. This results in many small steps allowing for much greater angular resolution, and so smoother operation.
+
+'Micro-step code'
+Estimation on maximum angular velocity:
