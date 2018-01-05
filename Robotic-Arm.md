@@ -64,6 +64,20 @@ The object instantiated at line 14
 
 ### 3D modelling the Arm
 
+Our Arm has three degrees of freedom in a simple design. The first servo motor control the direction- attached to a ground plate, it rotates the rest of the arm 180 degrees. The second servo motor corresponds to the first joint- the 'shoulder'. It rotates the next segment 180 degrees. The third servo rotates the last segment 180 degrees in such as way that the arm can fold in on itself.
+
+URDF for Arm:
+
+Urdf of rviz (and joint_state sliders)
+
+'picture'
+
+### Controlling the Arm:
+
+Connceting the three servos up to the arduino, it is now possible to use the joint_state sliders to interface with the servos. The code we created to do so is as follows:
+
+
+
 
 
 
