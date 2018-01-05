@@ -25,11 +25,47 @@ Now to write code to allow us to move the servo with a potentiometer.
 
 ### Getting started with ROS
 
+With ROS setup on the system, I can control the servo motors using the terminal, and later with rviz.
+
 Using the given code sample:
 
-'code from STEP 5'
+1  #include <ros.h>
+2  #include <std_msgs/UInt16.h>
+3  #include <Servo.h>
+4
+5  using namespace ros;
+6
+7  NodeHandle nh;
+8  Servo servo;
+9
+10  void cb( const std_msgs::UInt16& msg){
+11 	 servo.write(msg.data); // 0-180
+12  }
+13
+14  Subscriber<std_msgs::UInt16> sub("servo", cb);
+15
+16  void setup(){
+17  	nh.initNode();
+18  	nh.subscribe(sub);
+19
+20 	servo.attach(9); //attach it to pin 9
+21  }
+22
+23  void loop(){
+24  	nh.spinOnce();
+25 	delay(1);
+26  }
 
-I can control the servo motor's angle using a ros command: rostopic pub. The parameter needed is:
+And using in terminal: > rosrun rosserial_python serial_node.py /dev/ttyACM0
+I can control the servo motor's angle using a ros command: rostopic pub. The parameter needed is: 
+
+The function defined at line 10 
+The object instantiated at line 14 
+
+### 3D modelling the Arm
+
+
+
 
 
 
