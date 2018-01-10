@@ -95,4 +95,7 @@ Due to the size of our motor and nature of its design (weight, magnetic flux), w
 An added element is the use of an lcd screen to display the motor's speed when we control it. The speed will be controlled with an infrared remote, this has been initialised in the code to choose between 3 different motor speeds using the IR remote's push buttons.
 
 *Diagrams for DC motor:*
+
 *Code for DC motor:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Motor%20Control.txt
+
