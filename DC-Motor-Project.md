@@ -60,17 +60,29 @@ This arrangement of magnets proved to be an issue. The outer 'shell' crumpled du
 
 ### Third Iteration
 
-Our working motor improved on the second design with a much more stable magnet arrangement. The motor now has two commutators- one for positive (attached to end of armature) and one for ground connections (middle of armature). The positive section is wider to allow for easier connection to the power supply.
+Our working motor improved on the second design with a much more stable magnet arrangement. The motor now has two commutators- one for positive (middle of armature, no gaps) and one for negative connections (attached to end of armature). The negative section is wider to allow for easier connection to the power supply, and is made of copper plates for durability. The brush wires are attached to zip ties- the elastic nature of these allows the brushes to continually touch the commutators without need for human interaction.
 
-'link video of motor spinning'
+This design uses frictionless bearings for stability when rotating around the inner shaft. Additionally, all the magnets are attached to this shaft. None are present outside the motor, as apposed to the second design iteration. There are six of these magnets and they have 12kg of pull.
+
+*Inner shaft of the motor:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/second%20motor%20design%20core.jpg
+
+*Motor Operation video:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Motor%20operation.mp4
 
 ## Build an encoder
 
 Our encoder wheel was 3D-printed. The circuit has been made with assistance from the diagram in the dle lab notes
 
-'image link - circuit diagram'
+*Circuit diagram for encoder:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/encoder%20circuit.JPG
+
 *An example of an encoder wheel:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Screenshot%20from%202017-12-12%2019-19-38.png
+
+The encoder we are using is 32 bit.
+*Picture of encoder wheel:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/encoder%20printed.jpeg
 
 To measure the angular velocity of our motor we created the following arduino code:
 
@@ -78,4 +90,9 @@ To measure the angular velocity of our motor we created the following arduino co
 
 ## Controlling the DC Motor
 
-Due to the size of our motor and nature of its design, we needed more current than the arduino's motor shield could handle. To account for this we built a 
+Due to the size of our motor and nature of its design (weight, magnetic flux), we were drawing more current than the arduino's motor shield could handle. To account for this we built a mosfet circuit. An arduino PWM pin controls the motor duty through this circuit to avoid large ampage and not risk breaking the motor shield.
+
+An added element is the use of an lcd screen to display the motor's speed when we control it. The speed will be controlled with an infrared remote, this has been initialised in the code to choose between 3 different motor speeds using the IR remote's push buttons.
+
+*Diagrams for DC motor:*
+*Code for DC motor:*
