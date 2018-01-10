@@ -1,4 +1,4 @@
-#Stepper Motors and Arduino
+# Stepper Motors and Arduino
 
 ## Part 1 - Background
 
