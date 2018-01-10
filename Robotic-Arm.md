@@ -4,7 +4,8 @@
 
 ### Principle 
 
-'diagram of servo motor'
+*Servo motor circuit diagram:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Servo%20motor%20design.JPG
 
 A servo motor utilises position feedback control- The position targeted by the arduino code is compared to the current output position using the error amp. If these are different, an error signal is generated and the motor moves in a direction to compensate. A control pusle provides the intended position. When the comparison is zero (i.e. there is no difference betwenn intended position and current position) the motor stops moving. This lets us contol the exact anlge of the motor using arduino commands- demonstrated in the ROS section.
 
@@ -14,7 +15,8 @@ A servo motor utilises position feedback control- The position targeted by the a
 
 The first step is to control a servo motor with arduino so that its movement follows a sine wave of frequency 0.2Hz.
 
-'code to do this'
+*Code:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/ros%20lab%20screenshot%201.jpeg
 
 Now to write code to allow us to move the servo with a potentiometer.
 
@@ -22,6 +24,14 @@ Now to write code to allow us to move the servo with a potentiometer.
 'video of this'
 
 ## Part 2 - Robot Arm
+
+### Solidworks design
+
+*Solidwaorks screenshots:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/arm1.JPG
+
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/arm2.JPG
+
 
 ### Getting started with ROS
 
@@ -57,7 +67,10 @@ Using the given code sample:
 26  }
 
 And using in terminal: > rosrun rosserial_python serial_node.py /dev/ttyACM0
-I can control the servo motor's angle using a ros command: rostopic pub. The parameter needed is: 
+I can control the servo motor's angle using a ros command: rostopic pub. The parameter needed is:--once servo std_msgs/UInt16 90 (to move 90 degrees, for example).
+
+*Controlling with terminal:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/controllingservo_%20rostopicpub.png
 
 The function defined at line 10 
 The object instantiated at line 14 
@@ -68,18 +81,23 @@ Our Arm has three degrees of freedom in a simple design. The first servo motor c
 
 URDF for Arm:
 
-Urdf of rviz (and joint_state sliders)
 
-'picture'
 
 ### Controlling the Arm:
 
-Connceting the three servos up to the arduino, it is now possible to use the joint_state sliders to interface with the servos. The code we created to do so is as follows:
+Connceting the three servos up to the arduino, it is now possible to use the joint_state sliders to interface with the servos. We first tried controlling the URDF model on rviz.
+The arm on rviz can be controlled with the joint-state publisher node- sliders control each servo position.
 
+*rviz image and video:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/rvizinitial.png
 
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/20180110_141118000_iOS.MOV
 
+Now to create code that will enable us to control the arm servos themselves. We realised we would have to setup more servos in the code as we are now working with three. I have named them after the URDF servo names.
 
+*Code:*
 
+*Video of operation:*
 
 
 
