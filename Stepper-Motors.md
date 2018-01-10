@@ -4,7 +4,8 @@
 
 The stepper motor we are using in this lab is a hybrid stepper motor - meaning it consists of permanent magnets and metal teeth. The benefit of this configuaration is that it can use the same control method as a permanent magnet motor, while also recieving the benefits of having rotor teeth. One benefit is an improved torque due to a smaller magnetic circuit resistance.
 
-"Diagram of stepper motor"
+*Stepper motor Design:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/stepper%20motor%20design.JPG
 
 When a winding is supplied current, poles are created. These ploes attract the permanent poles on the rotor teeth. This causes the rotor to move (a step) to align the poles. 
 
