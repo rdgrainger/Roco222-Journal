@@ -15,7 +15,6 @@ Introduction to Sensors and Actuators
 
   1. Item 1
   2. Item 2 
-  ..* Sublist of item 2
   3. Item 3
 
 ### Step 2 - Command-line 101
@@ -66,17 +65,17 @@ is the same as rm -r -f the -r meaning "remove directories and their contents re
 
 This command lists characteristics of the computer's cpu, incluidng number of cores.
 
-Commands on terminal: Refer to image 01-01
 ### Step 3 - Github Account
 An account has been made to push changes to a remote repository
 
 ### Step 4 - Git repository
 
-Showcasing git config commands: Refer to image 01-02
+*Picture on username and email configuration:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Screenshot%20from%202017-09-28%2012-48-30.png
 
 ### Step 5 – Your first commit
 
-Git commit short command: Refer to image 01-03
+*Git commit short command:*
 
 ### Step 6 - Version Tracking
 
@@ -84,7 +83,8 @@ For this module, we have used git to create a lab journal using the markdown syn
 
 ### Step 7 - Going Social
 
-Pushing the changes to Github remote repository: Refer to image 01-04
+*Pushing changes to github:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Screenshot%20from%202017-09-28%2013-05-23.png
 
 ## Part 2 - Hacking a robot
 
@@ -94,7 +94,8 @@ The task asked us to interface with a robot using the Linux terminal and some py
 and then
 *ssh nao@192.168.0.184*
 
-Refer to image 01-05 for terminal screenshots of this
+*Image of this command:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/connectingtobot.png
 
 I entered the required password and was now connected to the robot. The next step was to find a way to send it a message.
 
@@ -104,13 +105,11 @@ I created a python file (named hack4.py) in the terminal and copied the code giv
 tts = ALProxy("ALTextToSpeech", "localhost", 9559)
 tts.say("I've hacked you, robot!")*
 
-Python editing: Refer to image 01-06
+*Python editing:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/typing%20in%20python.png
 
-Then I ran the executable hack4.py with:
-
-*nano hack4py*
-
-Running the python code: Refer to image 01-07
+*Then I ran the executable hack4.py with:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/makingtherobottalk.png
 
 
 
