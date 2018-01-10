@@ -5,8 +5,9 @@ We have been tasked with building a DC motor, testing it and then creating a bet
  
 ### The original motor:
  
-<img scr=https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/corkmotor1.jpg alt="Cork Motor" width="400" height="300"/>
- 
+*Original Cork motor:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/corkmotor1.jpg
+
 The basic motor is simply one coil of wire wound around a cork with a copper tape commutator. This commutator has two segments protuding from the cork, one for negative and the other, positive. The ends of the coil of wire is stripped and soldered onto the segments so current can be conducted. 
 The whole motor structure is supported by a basic frame with two magnets either side. The coil has 118 turns of copper.
 
@@ -28,10 +29,10 @@ Some of the major improvements to be made (without considering design changes):
  4. More magnets to create a stronger magnetic field. 
 
 
- 
 ### First Iteration
 
-'image link'
+*Original design:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/first%20iteration%20motor%201.jpg
 
 We first decided to use 16 coils of wire, each with 100 turns. The commutator would have 32 segments to accomodate this. The wire is coiled around an airbed pump. Our intital idea was to have long but narrow loops from one edge of the shaft to the other- this way there is no stacking of coils on the ends of the motor and the loops do not interfere with the commutator. 
 
@@ -45,11 +46,15 @@ In practice, this motor would not spin. The major problem is the coils of wire- 
  
 The design was changed to use 8 coils of wire, each with 100 turns. The commutator has 16 segments to accomodate this. The wire is coiled around an airbed pump. To improve on the previous design, the coils will be widened so that they form a roughly rectangular shape. This allows us to mantain the same principle of not stacking coils, but now the coils can function correctly.
 
-'diagram on improved coil structure'
+*diagram on improved coil structure:*
+
+*Picture of improved coil structure:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/first%20iteration%20motor%20big%20commutator.jpg
 
 One of the key elements of this design was the magnet arrangement. The idea was to have an unmoving shaft running through the armature with magnets attached. This shaft would not rotate, rather the armature would rotate around it. Surrounding the armature were two arcs (made of thin plastic) with multiple small magnets attached. This formed a 'shell' that almost surrounded the motor and so a magnetic field would be present for most of each coil's rotation.
 
-'image link'
+*Picture of magnet arrangement:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/second%20iteration%20motor%20shell.jpg
 
 This arrangement of magnets proved to be an issue. The outer 'shell' crumpled due to the plastic not being rigid enough to withstand the strong magnetic pull from the internal motor shaft magnets. It also left us with little space for the encoder.
 
@@ -64,6 +69,8 @@ Our working motor improved on the second design with a much more stable magnet a
 Our encoder wheel was 3D-printed. The circuit has been made with assistance from the diagram in the dle lab notes
 
 'image link - circuit diagram'
+*An example of an encoder wheel:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Screenshot%20from%202017-12-12%2019-19-38.png
 
 To measure the angular velocity of our motor we created the following arduino code:
 
