@@ -55,9 +55,8 @@ The object instantiated at line 14 reads what the user has input to terminal and
 
 Our Arm has three degrees of freedom in a simple design. The first servo motor control the direction- attached to a ground plate, it rotates the rest of the arm 180 degrees. The second servo motor corresponds to the first joint- the 'shoulder'. It rotates the next segment 180 degrees. The third servo rotates the last segment 180 degrees in such as way that the arm can fold in on itself.
 
-URDF for Arm:
-
-
+*URDF for Arm:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/armURDF.txt
 
 ### Controlling the Arm:
 
@@ -72,6 +71,7 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 Now to create code that will enable us to control the arm servos themselves. We realised we would have to setup more servos in the code as we are now working with three. I have named them after the URDF servo names. We had to adjust the int angle for each servo to match the degrees covered by each servo in the URDF. For example, one of our servos has a range of 3.14-6.28 radians (i.e. 180-360 degrees). This needed to be converted to 0-180 in the code.
 
 *Code:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Arm%20control.txt
 
 *Video of operation:*
 
