@@ -1,0 +1,37 @@
+#include <Servo.h>
+#include <ros.h>
+#include <sensor_msgs/JointState.h>
+
+using namespace ros;
+
+NodeHandle  nh;
+
+Servo baseservo;
+Servo firstservo;
+Servo secondservo;
+
+
+void cb(const sensor_msgs::JointState& msg){
+  int baserotate = (int)(msg.position[0] * 180/3.14);
+  baseservo.write(baserotate); // 0-180
+  
+  int shoulder = (int)(msg.position[1] * 180/7.85);
+  firstservo.write(shoulder); // 0-180
+  
+  int elbow = (int)(msg.position[2] * 180/6.28);
+  secondservo.write(elbow); // 0-180
+
+}
+Subscriber<sensor_msgs::JointState>sub("joint_states", cb);
+void setup(){
+  nh.initNode();
+  nh.subscribe(sub);
+  baseservo.attach(9); //attach it to pin 9
+  firstservo.attach(10); //attach it to pin 10
+  secondservo.attach(11); //attach it to pin 11
+}
+
+void  loop(){
+  nh.spinOnce();
+  delay(1);
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<robot name="roco_arm">
+  
+  
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<cylinder length="0.03" radius="0.3"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<link name="base_servo">
+		<visual>
+			<geometry>
+				<box size="0.32 0.23 0.12"/>
+			</geometry>
+			<origin rpy="0 1.57 0" xyz="0 0 0" />
+		</visual>
+	</link>
+
+	<link name="first_segment">
+		<visual>
+			<geometry>
+				<box size="1.15 0.03 0.15"/>
+			</geometry>
+			<origin rpy="1.57 1.57 0" xyz="0 0 0" />
+		</visual>
+	</link>
+
+	<link name="first_servo">
+		<visual>
+			<geometry>
+				<box size="0.32 0.23 0.12"/>
+			</geometry>
+			<origin rpy="1.57 0 1.57" xyz="0 0 0" />
+		</visual>
+	</link>
+
+	<link name="second_segment">
+		<visual>
+			<geometry>
+				<box size="1.15 0.03 0.15"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0.515 0 0" />
+		</visual>
+	</link>
+
+<link name="second_servo">
+		<visual>
+			<geometry>
+				<box size="0.32 0.23 0.12"/>
+			</geometry>
+			<origin rpy="0 0 1.57" xyz="0 0 0" />
+		</visual>
+	</link>
+
+	<link name="third_segment">
+		<visual>
+			<geometry>
+				<box size="1.15 0.03 0.15"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0.46 0 0" />
+		</visual>
+	</link>
+
+
+
+
+
+	<joint name="base_to_servo" type="revolute">
+		<axis xyz="0 0 1" />
+		<limit effort="1000" lower="0"
+						upper="3.14" velocity="0.5" />
+		<parent link="base_link"/>
+		<child link="base_servo"/>
+		<origin xyz="0 0 0.16" />
+	</joint>
+
+	<joint name="base_to_first_segment" type="fixed">
+		<parent link="base_servo"/>
+		<child link="first_segment"/>
+		<origin xyz="0.075 0.04 0.415" />
+	</joint>
+
+<joint name="first_segment_to_first_servo" type="fixed">
+		<parent link="first_segment"/>
+		<child link="first_servo"/>
+		<origin xyz="0.075 -0.085 0.46" />
+	</joint>
+
+	<joint name="servo_to_second" type="revolute">
+		<axis xyz="0 1 0" />
+		<limit effort="1000" lower="4.71"
+						upper="7.85" velocity="0.5" />
+		<parent link="first_servo"/>
+		<child link="second_segment"/>
+		<origin xyz="0 -0.16 0" />
+	</joint>
+
+	<joint name="second_segment_to_second_servo" type="fixed">
+		<parent link="second_segment"/>
+		<child link="second_servo"/>
+		<origin xyz="0.975 0.175 0.015" />
+	</joint>
+
+	<joint name="servo_to_third" type="revolute">
+		<axis xyz="0 1 0" />
+		<limit effort="1000" lower="3.14"
+						upper="6.28" velocity="0.5" />
+		<parent link="second_servo"/>
+		<child link="third_segment"/>
+		<origin xyz="0 0.16 0" />
+	</joint>
+
+
+</robot>
+
