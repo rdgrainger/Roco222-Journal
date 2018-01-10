@@ -39,56 +39,8 @@ With ROS setup on the system, I can control the servo motors using the terminal,
 
 Using the given code sample:
 
-1  #include <ros.h>
-
-2  #include <std_msgs/UInt16.h>
-
-3  #include <Servo.h>
-
-4
-5  using namespace ros;
-
-6
-
-7  NodeHandle nh;
-
-8  Servo servo;
-
-9
-
-10  void cb( const std_msgs::UInt16& msg){
-
-11 	 servo.write(msg.data); // 0-180
-
-12  }
-
-13
-
-14  Subscriber<std_msgs::UInt16> sub("servo", cb);
-
-15
-
-16  void setup(){
-
-17  	nh.initNode();
-
-18  	nh.subscribe(sub);
-
-19
-
-20 	servo.attach(9); //attach it to pin 9
-
-21  }
-
-22
-
-23  void loop(){
-
-24  	nh.spinOnce();
-
-25 	delay(1);
-
-26  }
+*Code link:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Controlling%20servos%20manually.txt
 
 And using in terminal: > rosrun rosserial_python serial_node.py /dev/ttyACM0
 I can control the servo motor's angle using a ros command: rostopic pub. The parameter needed is:--once servo std_msgs/UInt16 90 (to move 90 degrees, for example).
@@ -96,8 +48,8 @@ I can control the servo motor's angle using a ros command: rostopic pub. The par
 *Controlling with terminal:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/controllingservo_%20rostopicpub.png
 
-The function defined at line 10 
-The object instantiated at line 14 
+The function defined at line 10 'cb' is a topic that allows the user to write a number to terminal using rosparam, that represents the position they want the servo to move to.
+The object instantiated at line 14 reads what the user has input to terminal and calls the cb function
 
 ### 3D modelling the Arm
 
@@ -117,7 +69,7 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/20180110_141118000_iOS.MOV
 
-Now to create code that will enable us to control the arm servos themselves. We realised we would have to setup more servos in the code as we are now working with three. I have named them after the URDF servo names.
+Now to create code that will enable us to control the arm servos themselves. We realised we would have to setup more servos in the code as we are now working with three. I have named them after the URDF servo names. We had to adjust the int angle for each servo to match the degrees covered by each servo in the URDF. For example, one of our servos has a range of 3.14-6.28 radians (i.e. 180-360 degrees). This needed to be converted to 0-180 in the code.
 
 *Code:*
 
