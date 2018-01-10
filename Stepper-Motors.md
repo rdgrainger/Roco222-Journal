@@ -18,14 +18,18 @@ There are four modes of operation to implement for this stepper motor:
 
 Only one winding of the four is acivated at a time in this mode. Therefore the motor will turn 90 degrees per step- and there are four possible orientations. The orientations are aligned with the windings.
 
-'Full step code'
+*Full step code:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/stepper%20motor%20code%20full%20step.jpg
+
 Estimation of maximum angular velocity:
 
 ### Double-step mode
 
 Two windings are activated at once so the rotor aligns between two on each step. The angular resolution is still the same- there are 4 possible alignments.
 
-'Double-step code'
+*Double-step code:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/stepper%20motor%20code%20double%20step.jpg
+
 Estimation on maximum angular velocity:
 
 ### Half-step mode
