@@ -84,4 +84,6 @@ Now to create code that will enable us to control the arm servos themselves. We 
 *Code:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Arm%20control.txt
 
-The line: msg.position[2] * 180/6.28 converts to the correct range.
+> msg.position[2] * 180/6.28
+
+converts to the correct range.
