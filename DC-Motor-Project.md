@@ -1,6 +1,5 @@
 ## Build a DC Motor
  
-
 We have been tasked with building a DC motor, testing it and then creating a better iteration. The initial design included one enameled coil of wire, copper tape as a commutator, a cork to function as a core and a suppport structure.
  
 ### The original motor:
@@ -36,7 +35,8 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 We first decided to use 16 coils of wire, each with 100 turns. The commutator would have 32 segments to accomodate this. The wire is coiled around an airbed pump. Our intital idea was to have long but narrow loops from one edge of the shaft to the other- this way there is no stacking of coils on the ends of the motor and the loops do not interfere with the commutator. 
 
-'Diagram on coil structure'
+*diagram on original coil structure:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/coils%20-%20old.jpg
 
  The commutator would comprise of 32 segments in a circle around the end of the shaft. Magnets are to be placed on a support structure wither side of the motor, and would be of a greater number than the original design.
 
@@ -47,6 +47,7 @@ In practice, this motor would not spin. The major problem is the coils of wire- 
 The design was changed to use 8 coils of wire, each with 100 turns. The commutator has 16 segments to accomodate this. The wire is coiled around an airbed pump. To improve on the previous design, the coils will be widened so that they form a roughly rectangular shape. This allows us to mantain the same principle of not stacking coils, but now the coils can function correctly.
 
 *diagram on improved coil structure:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/coils%20-%20new.jpg
 
 *Picture of improved coil structure:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/first%20iteration%20motor%20big%20commutator.jpg
@@ -94,7 +95,11 @@ Due to the size of our motor and nature of its design (weight, magnetic flux), w
 
 An added element is the use of an lcd screen to display the motor's speed when we control it. The speed will be controlled with an infrared remote, this has been initialised in the code to choose between 3 different motor speeds using the IR remote's push buttons.
 
-*Diagrams for DC motor:*
+*Circuit diagram for DC motor:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Motor%20circuit.jpg
+
+*LCD pins:*
+https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Motor%20circuit.jpg
 
 *Code for DC motor:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Motor%20Control.txt
