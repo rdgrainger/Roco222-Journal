@@ -64,13 +64,18 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 To control the arm proper, it is neccessary to input the following ros commands:
 
-> rosparam set robot_description -t models/robot-arm.urdf
+> rosparam set robot_description -t models/robot-arm.urdf**
+
+
 This tells ros that the urdf file held in the 'models' directory will be used to describe the robot. Rviz will therefore be able to load this.
 
 > rosrun robot_state_publisher robot_state_publisher
+
+
 Starts the node to let us control the robot state.
 
 > rosrun joint_state_publisher joint_state_publisher _use_gui:=true
+
 
 Starts the joint_state_publisher node with a gui that has sliders to control servos
 
