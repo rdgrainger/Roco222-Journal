@@ -75,11 +75,11 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 ### Step 5 – Your first commit
 
-*Git commit short command:*
+Once the releavant file has been added with git add, we can make a commit with git commit. The terminal will show what is available to commit as long as the file has been added to repository previously with git add. A quick way to commit is to use git commit -m"commit message".
 
 ### Step 6 - Version Tracking
 
-For this module, we have used git to create a lab journal using the markdown syntax. We have learned the basics on git repositories, including the master branch and practised making additional branches. The text in these branches can be merged with the master branch. We have also begun to commit changes to a repository, adding a description on the updates made. By using git push, we can upload our changes to a remote repository- in this case on our github account.
+For this module, we have used git to create a lab journal using the markdown syntax. We have learned the basics on git repositories, including the master branch and practised making additional branches. The text in these branches can be merged with the master branch. We have also begun to commit changes to a repository, adding a description on the updates made. By using git push, we can upload our changes to a remote repository- in this case on our github account. Git, and by extension github, is widely used for code sharing and project management.
 
 ### Step 7 - Going Social
 
@@ -111,5 +111,5 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 *Then I ran the executable hack4.py with:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/makingtherobottalk.png
 
-
+Interfacing with the robot, there is no graphical interface to create & edit files. This is why it is important to be able to create and execute files with the command-line.
 
