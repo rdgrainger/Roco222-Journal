@@ -1,5 +1,7 @@
 # README file for roco222 projects
 
+Lab Partner: Jack Gell. ID: 10518789
+
 ## Contents of this repository:
 
 Git-and-Robot-Hack markdown journal (covers Lab 1)
