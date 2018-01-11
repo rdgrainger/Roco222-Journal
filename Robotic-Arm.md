@@ -7,7 +7,7 @@
 *Servo motor circuit diagram:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Servo%20motor%20design.JPG
 
-A servo motor utilises position feedback control- The position targeted by the arduino code is compared to the current output position using the error amp. If these are different, an error signal is generated and the motor moves in a direction to compensate. A control pusle provides the intended position. When the comparison is zero (i.e. there is no difference betwenn intended position and current position) the motor stops moving. This lets us contol the exact anlge of the motor using arduino commands- demonstrated in the ROS section.
+A servo motor utilises position feedback control- The position targeted by the arduino code is compared to the current output position using the error amp. If these are different, an error signal is generated and the motor moves in a direction to compensate. A control pusle provides the intended position. When the comparison is zero (i.e. there is no difference betwenn intended position and current position) the motor stops moving. This lets us contol the exact angle of the motor using arduino commands- demonstrated in the ROS section.
 
 'photo of connected servo'
 
@@ -27,7 +27,7 @@ Now to write code to allow us to move the servo with a potentiometer.
 
 ### Solidworks design
 
-*Solidwaorks screenshots:*
+*Solidworks screenshots:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/arm1.JPG
 
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/arm2.JPG
@@ -53,7 +53,7 @@ The object instantiated at line 14 reads what the user has input to terminal and
 
 ### 3D modelling the Arm
 
-Our Arm has three degrees of freedom in a simple design. The first servo motor control the direction- attached to a ground plate, it rotates the rest of the arm 180 degrees. The second servo motor corresponds to the first joint- the 'shoulder'. It rotates the next segment 180 degrees. The third servo rotates the last segment 180 degrees in such as way that the arm can fold in on itself.
+Our Arm has three degrees of freedom in a simple design. The first servo motor control the direction- attached to a ground plate, it rotates the rest of the arm 180 degrees. The second servo motor corresponds to the first joint- the 'shoulder'. It rotates the next segment 180 degrees. The third servo rotates the last segment 180 degrees in such as way that the arm can fold in on itself. 
 
 *URDF for Arm:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/armURDF.txt
@@ -68,14 +68,24 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/20180110_141118000_iOS.MOV
 
+To control the arm proper, it is neccessary to input the following ros commands:
+
+> rosparam set robot_description -t models/robot-arm.urdf
+This tells ros that the urdf file held in the 'models' directory will be used to describe the robot. Rviz will therefore be able to load this.
+
+> rosrun robot_state_publisher robot_state_publisher
+Starts the node to let us control the robot state.
+
+> rosrun joint_state_publisher joint_state_publisher _use_gui:=true
+
+Starts the joint_state_publisher node with a gui that has sliders to control servos
+
 Now to create code that will enable us to control the arm servos themselves. We realised we would have to setup more servos in the code as we are now working with three. I have named them after the URDF servo names. We had to adjust the int angle for each servo to match the degrees covered by each servo in the URDF. For example, one of our servos has a range of 3.14-6.28 radians (i.e. 180-360 degrees). This needed to be converted to 0-180 in the code.
 
 *Code:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Arm%20control.txt
 
+The line: msg.position[2] * 180/6.28 converts to the correct range.
+
 *Video of operation:*
-
-
-
-
 
