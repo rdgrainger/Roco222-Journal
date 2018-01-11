@@ -85,10 +85,6 @@ The encoder we are using is 32 bit.
 *Picture of encoder wheel:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/encoder%20printed.jpeg
 
-To measure the angular velocity of our motor we created the following arduino code:
-
-'arduino code for angular velocity'
-
 ## Controlling the DC Motor
 
 Due to the size of our motor and nature of its design (weight, magnetic flux), we were drawing more current than the arduino's motor shield could handle. To account for this we built a mosfet circuit. An arduino PWM pin controls the motor duty through this circuit to avoid large ampage and not risk breaking the motor shield.
