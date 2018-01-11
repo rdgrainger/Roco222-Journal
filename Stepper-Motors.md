@@ -22,7 +22,6 @@ Only one winding of the four is acivated at a time in this mode. Therefore the m
 *Full step code:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/stepper%20motor%20code%20full%20step.jpg
 
-Estimation of maximum angular velocity:
 
 ### Double-step mode
 
@@ -31,18 +30,12 @@ Two windings are activated at once so the rotor aligns between two on each step.
 *Double-step code:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/stepper%20motor%20code%20double%20step.jpg
 
-Estimation on maximum angular velocity:
 
 ### Half-step mode
 
 Alternates between two windings and one winding active- effectively combining full-step and double-step. Now there is twice the angular resolution- 8 possible orientations and 45 degrees between each.
 
-'Half-step code'
-Estimation on maximum angular velocity:
-
 ### Micro-step
 
 In microstep mode, the current provides sine waveform to the windings. This results in many small steps allowing for much greater angular resolution, and so smoother operation.
 
-'Micro-step code'
-Estimation on maximum angular velocity:
