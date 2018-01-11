@@ -9,8 +9,6 @@ https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20res
 
 A servo motor utilises position feedback control- The position targeted by the arduino code is compared to the current output position using the error amp. If these are different, an error signal is generated and the motor moves in a direction to compensate. A control pusle provides the intended position. When the comparison is zero (i.e. there is no difference betwenn intended position and current position) the motor stops moving. This lets us contol the exact angle of the motor using arduino commands- demonstrated in the ROS section.
 
-'photo of connected servo'
-
 ### Operation
 
 The first step is to control a servo motor with arduino so that its movement follows a sine wave of frequency 0.2Hz.
@@ -18,10 +16,6 @@ The first step is to control a servo motor with arduino so that its movement fol
 *Code:*
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/ros%20lab%20screenshot%201.jpeg
 
-Now to write code to allow us to move the servo with a potentiometer.
-
-'code to do this'
-'video of this'
 
 ## Part 2 - Robot Arm
 
@@ -86,6 +80,3 @@ Now to create code that will enable us to control the arm servos themselves. We 
 https://github.com/rdgrainger/roco222-journal/blob/master/DC-Motor-Project%20resources/Arm%20control.txt
 
 The line: msg.position[2] * 180/6.28 converts to the correct range.
-
-*Video of operation:*
-
